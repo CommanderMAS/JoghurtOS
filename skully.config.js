@@ -4,7 +4,7 @@ export const loop_time = 15000;
 
 //Possible Strategies
 // Hacking / Stockmarket / Crime / Corporations
-export const strategy = HackSemaphores;
+export const strategy = "Hacking";
 
 //Number of sleeves and config
 export const hassleeves = 0;
@@ -12,7 +12,7 @@ export const hassleeves = 0;
 export const sleevemode = "allsame";
 
 //Hacknet Config // "as" after Servers // "bs" before Servers // "da" disabled // "al" alternating
-export const hacknet = "as";
+export const hacknetstrat = "as";
 
 
 //Factionwork
