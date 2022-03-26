@@ -1,7 +1,7 @@
 /** @param {NS} ns **/
 export async function main(ns) {
 	await ns.exec('_trash_joghurt.js','home',1,"update");
-	await ns.wget("https://raw.githubusercontent.com/CommanderMAS/JoghurtOS/main/a.config.js","a.config.js");
+	await ns.wget("https://raw.githubusercontent.com/CommanderMAS/JoghurtOS/main/skully.config.js","skully.config.js");
 	await ns.wget("https://raw.githubusercontent.com/CommanderMAS/JoghurtOS/main/_trash_joghurt.js","_trash_joghurt.js");
 	await ns.wget("https://raw.githubusercontent.com/CommanderMAS/JoghurtOS/main/_update_joghurt.js","_update_joghurt.js");
 	await ns.wget("https://raw.githubusercontent.com/CommanderMAS/JoghurtOS/main/os.joghurt.js","os.joghurt.js");
