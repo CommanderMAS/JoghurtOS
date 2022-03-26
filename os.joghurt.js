@@ -112,7 +112,7 @@ async function heartbeat() {
     ns.clearPort(20);
     await ns.writePort(20, new Date().valueOf());
     if (ns.ps("home").filter(process => process.filename == "sbin.keepalive.js").length != 1) {
-        ns.exec("sbin.keepalive.js","home");
+        ns.exec("os.joghurt.js","home");
         ns.print("keepalive not found");
     }
 
