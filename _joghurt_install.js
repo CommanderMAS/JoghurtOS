@@ -11,6 +11,9 @@ export async function main(ns) {
 
 	await ns.wget("https://raw.githubusercontent.com/CommanderMAS/JoghurtOS/main/hitchcock.toyst.js","hitchcock.toyst.js");
 
+	await ns.wget("https://raw.githubusercontent.com/CommanderMAS/JoghurtOS/main/boyle.gamestage.js","boyle.gamestage.js");
+	await ns.wget("https://raw.githubusercontent.com/CommanderMAS/JoghurtOS/main/boyle.gamestates.js","boyle.gamestates.js");
+
 
 	//await ns.wget("https://raw.githubusercontent.com/CommanderMAS/JoghurtOS/main/TEST","TEST");
 
