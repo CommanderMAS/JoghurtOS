@@ -7,7 +7,7 @@
 
 
 import { reservedHomeRam, loop_time, strategy, hassleeves, sleevemode, hacknet,factionwork,trymaxaugments,endnow,autoaug,get_prog } from "./skully.config.js";
-import * as toyst from "./hitchcock.hitchcock.toyst.js";
+import * as toyst from "./hitchcock.toyst.js";
 import { fmt_cash, fmt_num, fmt_bits, ram, hashrate, purchased } from "./lib.utils.so";
 import updateData, { firstLoad, snapshotServer, snapshotPlayer } from "./lib.loader.so";
 
