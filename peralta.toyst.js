@@ -42,8 +42,8 @@ export function banner(ns, start_time=null) {
 }
 
 export function toyst(ns) {
-    Math.round(Math.random()*14,1);
-    switch (expression) {
+    var number = Math.round(Math.random()*14,1);
+    switch (number) {
         case 1:
             ns.tprint("I’m Sorry About Tonight!");
             break;
