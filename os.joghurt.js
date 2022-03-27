@@ -26,7 +26,6 @@ const singularity = false; // source file 4, not in default, see "sf4" branch on
 export async function main(ns){
     var minhomeram = reservedHomeRam; // blubbs
     globalThis.ns = ns;
-    toyst.toyst(ns);
     let start_time = new Date();
     //let {servers, player} = firstLoad(ns);
 
@@ -60,15 +59,16 @@ export async function main(ns){
         var moneyStage = determineResourceAllocation(servers, player);
 
 
-        ({player, servers}    = await gameStage.untap       (ns, player, servers));
-        ({player, servers}    = await moneyStage.upkeep     (ns, player, servers));
-        ({player, servers}    = await gameStage.pre_hack    (ns, player, servers));
-        ({player, servers}          = moneyStage.buy_things (ns, player, servers));
-        ({player, servers}          = gameStage.hack        (ns, player, servers));
-        ({player, servers}    = await gameStage.post_hack   (ns, player, servers));
-        ({player, servers}    = await moneyStage.end_step   (ns, player, servers));
+        //({player, servers}    = await gameStage.untap       (ns, player, servers));
+        //({player, servers}    = await moneyStage.upkeep     (ns, player, servers));
+        //({player, servers}    = await gameStage.pre_hack    (ns, player, servers));
+        //({player, servers}          = moneyStage.buy_things (ns, player, servers));
+        //({player, servers}          = gameStage.hack        (ns, player, servers));
+        //({player, servers}    = await gameStage.post_hack   (ns, player, servers));
+        //({player, servers}    = await moneyStage.end_step   (ns, player, servers));
 
         if (Math.random() < 0.05) {
+            toyst.toyst(ns);
             motd.banner_short(ns, start_time);
         }
 
