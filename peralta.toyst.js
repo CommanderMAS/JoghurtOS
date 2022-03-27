@@ -42,6 +42,7 @@ export function banner(ns, start_time=null) {
 }
 
 export function toyst(ns) {
+    ns.tprint("Title of your Sex Tape");
     var number = Math.round(Math.random()*14,1);
     switch (number) {
         case 1:
