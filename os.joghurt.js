@@ -24,7 +24,7 @@ import { determineGameStage } from "./boyle.gamestage";
 const singularity = false; // source file 4, not in default, see "sf4" branch on github.
 
 export async function main(ns){
-    ram = reservedHomeRam; // blubbs
+    var minhomeram = reservedHomeRam; // blubbs
     globalThis.ns = ns;
     toyst.toyst(ns);
     let start_time = new Date();

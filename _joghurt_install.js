@@ -17,6 +17,7 @@ export async function main(ns) {
 
 	//await ns.wget("https://raw.githubusercontent.com/CommanderMAS/JoghurtOS/main/TEST","TEST");
 
-
-	ns.exec('_update_joghurt.js','home',1,"install");
+	if (ns.args[0]!="install") {
+		ns.exec('_update_joghurt.js', 'home', 1, "install");
+	}
 }
