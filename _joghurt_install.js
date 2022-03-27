@@ -13,8 +13,10 @@ export async function main(ns) {
 	await ns.wget("https://raw.githubusercontent.com/CommanderMAS/JoghurtOS/main/jeffords.player.js","jeffords.player.js");
 	await ns.wget("https://raw.githubusercontent.com/CommanderMAS/JoghurtOS/main/jeffords.database.js","jeffords.database.js");
 
+	if (!ns.fileExists("skully.config.js")) {
+		await ns.wget("https://raw.githubusercontent.com/CommanderMAS/JoghurtOS/main/skully.config.js", "skully.config.js");
+	}
 	await ns.wget("https://raw.githubusercontent.com/CommanderMAS/JoghurtOS/main/hitchcock.init.js","hitchcock.init.js");
-	await ns.wget("https://raw.githubusercontent.com/CommanderMAS/JoghurtOS/main/skully.config.js","skully.config.js");
 
 	await ns.wget("https://raw.githubusercontent.com/CommanderMAS/JoghurtOS/main/boyle.gamestage.js","boyle.gamestage.js");
 	await ns.wget("https://raw.githubusercontent.com/CommanderMAS/JoghurtOS/main/boyle.gamestates.js","boyle.gamestates.js");

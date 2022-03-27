@@ -30,6 +30,10 @@ export const endnow = 0;
 
 export const autoaug = 0;
 
+//Automatisch augmenten
+
+export const singularity = 0;
+
 //Programme erzeugen
 //Mögliche Werte : Create / Sleeve / Buy
 
