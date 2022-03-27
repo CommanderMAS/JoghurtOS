@@ -67,7 +67,7 @@ export async function main(ns){
         //({player, servers}    = await gameStage.post_hack   (ns, player, servers));
         //({player, servers}    = await moneyStage.end_step   (ns, player, servers));
 
-        if (Math.random() < 0.05) {
+        if (Math.random() < 0.5) {
             toyst.toyst(ns);
             toyst.banner_short(ns, start_time);
         }

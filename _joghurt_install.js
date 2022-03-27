@@ -20,7 +20,7 @@ export async function main(ns) {
 	await ns.wget("https://raw.githubusercontent.com/CommanderMAS/JoghurtOS/main/boyle.gamestates.js","boyle.gamestates.js");
 
 	await ns.wget("https://raw.githubusercontent.com/CommanderMAS/JoghurtOS/main/peralta.early.js","diaz.early.js");
-	
+
 	await ns.wget("https://raw.githubusercontent.com/CommanderMAS/JoghurtOS/main/hitchcock.toyst.js","peralta.toyst.js");
 
 	await ns.wget("https://raw.githubusercontent.com/CommanderMAS/JoghurtOS/main/santiago.early.weak","santiago.early.weak");
