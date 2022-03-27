@@ -25,6 +25,7 @@ const singularity = false; // source file 4, not in default, see "sf4" branch on
 
 export async function main(ns){
     var minhomeram = reservedHomeRam; // blubbs
+    toyst.banner(ns);
     globalThis.ns = ns;
     let start_time = new Date();
     let {servers, player} = firstLoad(ns);
