@@ -7,7 +7,7 @@
 
 
 import { reservedHomeRam, loop_time, strategy, hassleeves, sleevemode, hacknetstrat,factionwork,trymaxaugments,endnow,autoaug,get_prog } from "./skully.config.js";
-import * as toyst from "./hitchcock.toyst.js";
+import * as toyst from "./peralta.toyst.js";
 import { fmt_cash, fmt_num, fmt_bits, ram, hashrate, purchased } from "./lib.utils.so";
 import updateData, { firstLoad, snapshotServer, snapshotPlayer } from "./lib.loader.so";
 
@@ -27,17 +27,17 @@ export async function main(ns){
     var minhomeram = reservedHomeRam; // blubbs
     globalThis.ns = ns;
     let start_time = new Date();
-    //let {servers, player} = firstLoad(ns);
+    let {servers, player} = firstLoad(ns);
 
     // kill all non-joghurt files on boot
-    //servers.map(server => server.pids).flat().filter(process => process.filename != "os.joghurt.js" && process.filename != "start.holt.js").forEach(process => ns.kill(process.pid));
+    //servers.map(server => server.pids).flat().filter(process => process.filename != "os.joghurt.js" && process.filename != "holt.start.js").forEach(process => ns.kill(process.pid));
 
     // start additional scripts
     //     if (singularity) {
     //         ns.exec("etc.singularity.js", "home");
     //     }
 
-    while (false) {
+    while (true) {
         if (servers.some(s => s.hostname == "home" && s.ram.trueMax >= 32)) {
             await heartbeat();
         } else {
@@ -69,11 +69,12 @@ export async function main(ns){
 
         if (Math.random() < 0.05) {
             toyst.toyst(ns);
-            motd.banner_short(ns, start_time);
+            toyst.banner_short(ns, start_time);
         }
 
         display_deltas(ns, player, servers, gameStage, moneyStage);
         display_notices(ns, player, servers, gameStage, moneyStage);
+        await ns.sleep(60000);
     }
 
 }
