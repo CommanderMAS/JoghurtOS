@@ -35,7 +35,7 @@ function generatePathList(ns, serverNameList) {
 }
 
 export async function backdoor_server(ns){
-    var path = get_path(args[0]);
+    //var path = get_path(args[0]);
     //connect_bla
     ns.tprint(args[0]+" wurde gebackdoort");
     //ns.installBackdoor();
@@ -70,6 +70,7 @@ export async function get_path(ns) {
         }
         ns.tprintf("Run this command string to connect to the target server: ");
         ns.tprintf(connectString);
+        return connectString;
 
     } else {
         // print this if the target doesn't exist or if there's not arg provided.
