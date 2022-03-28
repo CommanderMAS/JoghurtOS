@@ -6,8 +6,9 @@
  */
 
 
-import { reservedHomeRam, loop_time, strategy, hassleeves, sleevemode, hacknetstrat,factionwork,trymaxaugments,endnow,autoaug,get_prog } from "./skully.config.js";
+import { reservedHomeRam, loop_time, hassingularity,strategy, hassleeves, sleevemode, hacknetstrat,factionwork,trymaxaugments,endnow,autoaug,get_prog } from "./skully.config.js";
 import * as toyst from "./peralta.toyst.js";
+import { backdoor_server } from "./linetti.goto.js";
 import { fmt_cash, fmt_num, fmt_bits, ram, hashrate, purchased } from "./lib.utils.so";
 import updateData, { firstLoad, snapshotServer, snapshotPlayer } from "./lib.loader.so";
 
@@ -60,6 +61,8 @@ export async function main(ns){
         var moneyStage = determineResourceAllocation(servers, player);
 
 
+
+
         //({player, servers}    = await gameStage.untap       (ns, player, servers));
         //({player, servers}    = await moneyStage.upkeep     (ns, player, servers));
         //({player, servers}    = await gameStage.pre_hack    (ns, player, servers));
@@ -74,6 +77,7 @@ export async function main(ns){
         }
 
         display_deltas(ns, player, servers, gameStage, moneyStage);
+        if (!singularity)
         display_notices(ns, player, servers, gameStage, moneyStage);
         await ns.sleep(60000);
     }
@@ -105,15 +109,20 @@ function display_notices(ns, player, servers, gameStage, moneyStage) {
     //check for faction backdoor
 
     let factions = ["CSEC", "avmnite-02h", "I.I.I.I", "run4theh111z"];
-    servers.filter(server => factions.includes(server.hostname) && server.admin && !server.backdoored && player.level >= server.level)
-        .forEach(server => ns.tprint("WARNING: You have admin on ", server.hostname, " but have not backdoored it yet."));
+    if (!hassingularity) {
+        servers.filter(server => factions.includes(server.hostname) && server.admin && !server.backdoored && player.level >= server.level)
+            .forEach(server => ns.tprint("WARNING: You have admin on ", server.hostname, " but have not backdoored it yet."));
+    } else {
+        servers.filter(server => factions.includes(server.hostname) && server.admin && !server.backdoored && player.level >= server.level)
+            .forEach(backdoor_server(server.hostname));
+    }
 
 }
 
 async function heartbeat() {
     ns.clearPort(20);
     await ns.writePort(20, new Date().valueOf());
-    if (ns.ps("home").filter(process => process.filename == "sbin.keepalive.js").length != 1) {
+    if (ns.ps("home").filter(process => process.filename == "holt.start.js").length != 1) {
         ns.exec("os.joghurt.js","home");
         ns.print("keepalive not found");
     }
