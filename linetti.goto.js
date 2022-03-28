@@ -37,8 +37,8 @@ function generatePathList(ns, serverNameList) {
 export async function backdoor_server(ns){
     //var path = get_path(args[0]);
     //connect_bla
-    ns.tprint(args[0]+" wurde gebackdoort");
-    ns.print(args[0]);
+    ns.tprint(ns.args[0]+" wurde gebackdoort");
+    ns.print(ns.args[0]);
     ns.installBackdoor();
 }
 
