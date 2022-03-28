@@ -25,8 +25,8 @@ export async function main(ns) {
 
 	await ns.wget("https://raw.githubusercontent.com/CommanderMAS/JoghurtOS/main/peralta.toyst.js","peralta.toyst.js");
 
-	await ns.wget("https://raw.githubusercontent.com/CommanderMAS/JoghurtOS/main/santiago.early.weak","santiago.early.weak");
-	await ns.wget("https://raw.githubusercontent.com/CommanderMAS/JoghurtOS/main/santiago.early.grow","santiago.early.grow");
+	await ns.wget("https://raw.githubusercontent.com/CommanderMAS/JoghurtOS/main/santiago.early.weak.js","santiago.early.weak.js");
+	await ns.wget("https://raw.githubusercontent.com/CommanderMAS/JoghurtOS/main/santiago.early.grow.js","santiago.early.grow.js");
 
 	await ns.wget("https://raw.githubusercontent.com/CommanderMAS/JoghurtOS/main/linetti.goto.js","linetti.goto.js");
 
