@@ -17,7 +17,7 @@ export async function main(ns) {
 
         if (ns.ps("home").filter(process => process.filename == "os.joghurt.js").length != 1) {
             ns.run("os.joghurt.js");
-            ns.print("phoenix not found");
+            ns.print("Joghurt not found");
         }
 
         try {

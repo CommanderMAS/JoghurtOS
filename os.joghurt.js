@@ -114,7 +114,7 @@ function display_notices(ns, player, servers, gameStage, moneyStage) {
             .forEach(server => ns.tprint("WARNING: You have admin on ", server.hostname, " but have not backdoored it yet."));
     } else {
         servers.filter(server => factions.includes(server.hostname) && server.admin && !server.backdoored && player.level >= server.level)
-            .forEach(server => backdoor_server(server.hostname));
+            .forEach(server => backdoor_server(ns,server.hostname));
     }
 
 }
