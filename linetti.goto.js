@@ -38,7 +38,8 @@ export async function backdoor_server(ns){
     //var path = get_path(args[0]);
     //connect_bla
     ns.tprint(args[0]+" wurde gebackdoort");
-    //ns.installBackdoor();
+    ns.print(args[0]);
+    ns.installBackdoor();
 }
 
 export async function get_path(ns) {
