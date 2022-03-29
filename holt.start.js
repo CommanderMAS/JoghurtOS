@@ -11,6 +11,7 @@ export async function main(ns) {
             ns.tprint("scheduled reboot");
             ns.ps("home").filter(process => process.filename != "holt.start.js").forEach(process => ns.kill(process.pid));
             await ns.run("_update_joghurt.js");
+            ns.sleep(5000);
             ns.run("os.joghurt.js");
             count = 0;
         }
